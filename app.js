@@ -18,12 +18,12 @@ function abc() {
     
     mil++
     document.getElementById("milisecond").innerText = mil;
-    if (mil > 10) {
+    if (mil > 9) {
         mil = 0
         sec++
         document.getElementById("second").innerText = sec;
     }
-    if (sec > 60) {
+    if (sec > 59) {
         sec = 0
         min++
         document.getElementById("minute").innerText = min;
@@ -55,5 +55,16 @@ function pause(){
     milisecond = document.getElementById("milisecond").innerText= mil
     document.getElementById("start").removeAttribute("disabled")
     document.getElementById("pause").setAttribute("disabled",true)
+    
+    l1=  document.getElementById("lap")
+    l2=  document.createElement("h6")
+    l3=  document.createTextNode(minute+" :mins ,"+ second+" :sec ,"+ milisecond+" :mili-sec ,")
+    l2.appendChild(l3);
+    l1.appendChild(l2);
+    
+
+    
+    
 
 }
+
