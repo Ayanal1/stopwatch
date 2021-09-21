@@ -19,15 +19,15 @@
         height: 70%!important;
         font-size: 50px!important;
         position: absolute;
-        top: 20%;
+        top: 0%;
         left: 20%;
         color: white;
         /* border: solid 2px black; */
-    
+        
     }
     .watch{
         font-size: 50px!important;
-        margin-top: 10%;
+        margin-top: 5%;
         text-align: center;
     }
     .numbers{
@@ -41,9 +41,23 @@
         top: 20%;
         left: 25%;
     }
+    .lap{
+        position: absolute;
+        top:0% ;
+        left: -20%;
+        font-size: 5px;
+    }
     @media only screen and (max-width: 483px) {
-        
+        .lap{
+        position: absolute;
+        top:100% ;
+        left: 0%;
+        font-size: 5px;
+    }
         .shape{
+            width: 80%;
+            margin-top: 10%;
+            height: 85%!important;
             border: 0.5px solid rgb(90 90 247);
         }
         .btnwid{
@@ -53,7 +67,7 @@
 }
     @media only screen and (max-width: 768px) {
         .numbers{
-            font-size: 50px!important;
+            font-size: 40px!important;
             
         }
         
@@ -80,8 +94,13 @@
         <button class="btn btn-danger btnwid" disabled id="reset" onclick="reset()">RESET</button>
         <button class="btn btn-success btnwid" disabled id="pause" onclick="pause()">PAUSE</button>
     </div>
+    
+    
+    <h1 class="lap" style="font-size: 8px;" id="lap">
 </div>
+</h1>
 </body>
 <script src="app.js"></script>
 
 </html>
+
