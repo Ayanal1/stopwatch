@@ -12,9 +12,29 @@
 
     body{
         background-image: url(https://wallpapercave.com/wp/wp2757874.gif);
-        
+        font-family: cursive;
     }
-    .shape{
+    .glow {
+  font-size: 50px;
+  color: #fff;
+  text-align: center;
+  margin-top: 5%;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        
+        text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #1c0097, 0 0 40px #1c0097, 0 0 50px #1c0097, 0 0 60px #1c0097, 0 0 70px #1c0097;
+    }
+    
+    to {
+        text-shadow: 0 0 20px #fff, 0 0 30px #3437ff, 0 0 40px #3437ff, 0 0 50px #3437ff, 0 0 60px #3437ff, 0 0 70px #3437ff, 0 0 80px #3437ff;
+    }
+}
+.shape{
+    
+       
         width: 70%!important;
         height: 70%!important;
         font-size: 50px!important;
@@ -22,24 +42,34 @@
         top: 0%;
         left: 20%;
         color: white;
-        /* border: solid 2px black; */
+      
         
     }
-    .watch{
-        font-size: 50px!important;
-        margin-top: 5%;
-        text-align: center;
-    }
+    
     .numbers{
         font-size: 100px!important;
         
     }
-    .btnwid{
-        font-size: 50px!important;
+    .btndiv{
+        display: flex;
+        flex-direction: row;
+       
+  align-items: center;
+  justify-content: center;
         width: 50%;
-        position: relative;
-        top: 20%;
+        position: absolute;
         left: 25%;
+        
+        
+        
+    }
+    .btnwid{
+        text-align: center;
+        font-size: 20px!important;
+        margin: 2px;
+        width: 100px;
+        height: 10%;
+      
     }
     .lap{
         position: absolute;
@@ -48,20 +78,29 @@
         font-size: 5px;
     }
     @media only screen and (max-width: 483px) {
+        .btndiv{
+        display: flex;
+        flex-direction: column;
+  
+        
+    }
         .lap{
-        position: absolute;
-        top:100% ;
-        left: 0%;
-        font-size: 5px;
+            position: absolute;
+            top:100% ;
+            left: 20%;
+        font-size: 4px;
     }
         .shape{
             width: 80%;
             margin-top: 10%;
-            height: 85%!important;
+            height: 80%!important;
             border: 0.5px solid rgb(90 90 247);
+            position: absolute;
+            top: 0%;
+            left: 16%;
         }
         .btnwid{
-        font-size: 30px!important;
+        font-size: 25px!important;
     
     }
 }
@@ -70,29 +109,32 @@
             font-size: 40px!important;
             
         }
-        
+        .shape{
+            font-size: 30px;
+        }
       
 }
 
 </style>
 <body  >
-    <div class="shape  ">
+    <div class="shape">
     <div  >
-        <h1 class="watch" >STOP WATCH</h1>
-        <h1 class="watch numbers" >
+        <h1 class="watch glow" >STOP WATCH</h1>
+        <h1 class="watch numbers glow" >
             <strong id="minute"> 0 </strong>
-            <a >:</a>
+            <a > : </a>
             <strong  id="second"> 0 </strong>
-            <a >:</a>
+            <a > : </a>
             <strong  id="milisecond"> 0 </strong>
             
         </h1>
         
     </div>
-    <div   >
+    <div class="btndiv"  >
         <button class="btn btn-primary btnwid" id="start" onclick="start()">START</button>
         <button class="btn btn-danger btnwid" disabled id="reset" onclick="reset()">RESET</button>
         <button class="btn btn-success btnwid" disabled id="pause" onclick="pause()">PAUSE</button>
+        <button class="btn btn-info btnwid" disabled id="split" onclick="split()">SPLIT</button>
     </div>
     
     
@@ -103,4 +145,5 @@
 <script src="app.js"></script>
 
 </html>
+
 
