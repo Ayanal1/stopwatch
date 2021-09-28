@@ -32,6 +32,7 @@ function abc() {
 }
 
 function reset() {
+    i=1
     clearInterval(intervalfirst)
     min = 0
     sec = 0
