@@ -14,7 +14,7 @@
         background-image: url(https://wallpapercave.com/wp/wp2757874.gif);
         font-family: cursive;
     }
-  /*  .glow {
+    /* .glow {
   font-size: 50px;
   color: #fff;
   text-align: center;
@@ -34,63 +34,86 @@
 } */
 .shape{
     
+       /* border: 1px solid white; */
+       width: 100%!important;
+       height: 70%!important;
+       font-size: 50px!important;
+       /* position: absolute;
+       top: 0%; */
+       margin: 5px auto;
+       color: white;
+       /* border: solid 2px black; */
        
-        width: 70%!important;
-        height: 70%!important;
-        font-size: 50px!important;
-        position: absolute;
-        top: 0%;
-        left: 20%;
-        color: white;
-      
-        
     }
-    
+    .watch{
+        /* border: 1px solid white; */
+        /* font-size: 40px!important; */
+        margin-top: 5%;
+        text-align: center;
+    }
     .numbers{
-        font-size: 100px!important;
-        
+        height: 40%;
+        font-size: 4em!important;
+        /* width: 500px; */
+        margin: 2px auto;
     }
     .btndiv{
+        /* border: 1px solid white; */
         display: flex;
         flex-direction: row;
        
   align-items: center;
   justify-content: center;
         width: 50%;
-        position: absolute;
-        left: 25%;
+        /* position: absolute;
+        left: 0%; */
         
+        margin: 2px auto;
         
         
     }
     .btnwid{
         text-align: center;
         font-size: 20px!important;
-        margin: 2px;
+        margin: 2px auto;
         width: 100px;
         height: 10%;
-      
+        /* position: relative;
+        top: 0%;
+        left: 25%; */
+        /* border-radius: 1%; */
     }
     .lap{
-        position: absolute;
-        top:0% ;
-        left: -20%;
-        font-size: 5px;
+        text-align: center;
+        margin: 1px auto;
+        color: white;
+        /* position: absolute;
+        top:72% ;
+        left: 40%;
+        font-size: 5px; */
+    }
+    @media only screen and (max-width: 1000px) {
+        .numbers{
+            /* font-size: 40px!important; */
+            font-size: 2em!important;
+            margin: 2px auto;
+        }
+        
     }
     @media only screen and (max-width: 483px) {
         .btndiv{
         display: flex;
         flex-direction: column;
-  
+    
         
-    }
-        .lap{
-            position: absolute;
-            top:100% ;
-            left: 20%;
-        font-size: 4px;
-    }
-        .shape{
+    } 
+    .numbers{
+           
+            font-size: 50px!important;
+            margin: 2px auto;
+        }
+        
+        /* .shape{
             width: 80%;
             margin-top: 10%;
             height: 80%!important;
@@ -98,37 +121,28 @@
             position: absolute;
             top: 0%;
             left: 16%;
-        }
+        } */
         .btnwid{
         font-size: 25px!important;
     
     }
-}
-    @media only screen and (max-width: 768px) {
-        .numbers{
-            font-size: 40px!important;
-            
-        }
-        .shape{
-            font-size: 30px;
-        }
-      
-}
-
+    }
+    
+    
 </style>
 <body  >
     <div class="shape">
-    <div  >
-        <h1 class="watch glow" >STOP WATCH</h1>
-        <h1 class="watch numbers glow" >
-            <strong id="minute"> 0 </strong>
-            <a > : </a>
-            <strong  id="second"> 0 </strong>
-            <a > : </a>
-            <strong  id="milisecond"> 0 </strong>
+        <div  >
+            <h1 class="watch glow" >STOP WATCH</h1>
+            <h1 class="watch numbers glow" >
+                <strong id="minute"> 0 </strong>
+                <a > : </a>
+                <strong  id="second"> 0 </strong>
+                <a > : </a>
+                <strong  id="milisecond"> 0 </strong>
+                
+            </h1>
             
-        </h1>
-        
     </div>
     <div class="btndiv"  >
         <button class="btn btn-primary btnwid" id="start" onclick="start()">START</button>
@@ -138,12 +152,14 @@
     </div>
     
     
-    <h1 class="lap" style="font-size: 8px;" id="lap">
 </div>
+
+<h1 class="lap" style="font-size: 8px;" id="lap">
 </h1>
 </body>
 <script src="app.js"></script>
 
 </html>
+
 
 
