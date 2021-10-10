@@ -20,7 +20,7 @@ function abc() {
     
     mil++
     document.getElementById("milisecond").innerText = mil;
-    if (mil > 9) {
+    if (mil > 8) {
         mil = 0
         sec++
         document.getElementById("second").innerText = sec;
